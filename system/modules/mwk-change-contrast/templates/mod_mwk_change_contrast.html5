@@ -1,0 +1,30 @@
+<div class="<?php echo $this->class; ?> "<?php echo $this->cssID; ?>>
+    <?php echo $this->changeContrastButtonReset; ?>
+    <?php echo $this->changeContrastButton; ?>
+</div>
+
+<script>
+    jQuery(document).ready(function()
+    {
+        var htmlTags            = '<?php echo $this->changeContrastHtmlTags; ?>';
+        var fontColor           = '<?php echo $this->changeContrastFontColor; ?>';
+        var backgroundColor     = '<?php echo $this->changeContrastBackgroundColor; ?>';
+
+        if (Cookies.get('curColor<?php echo $this->jsContrast; ?>') != undefined) {
+            curColor = parseInt(Cookies.get('curColor<?php echo $this->jsContrast; ?>'));
+            jQuery(htmlTags).css({'background-color': '#'+backgroundColor, 'color':'#'+fontColor}, curColor);
+        }
+
+        // Reset Button
+        jQuery('#reset-<?php echo $this->jsContrast; ?>').click(function() {
+            Cookies.remove('curColor<?php echo $this->jsContrast; ?>');
+            jQuery(htmlTags).css({'background-color': '', 'color':''});
+        });
+
+        // Contrast Button
+        jQuery('#contrast-<?php echo $this->jsContrast; ?>').click(function(){
+            jQuery(htmlTags).css({'background-color': '#'+backgroundColor, 'color':'#'+fontColor});
+            Cookies.set('curColor<?php echo $this->jsContrast; ?>', '1');
+        });
+    });
+</script>
