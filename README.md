@@ -78,6 +78,6 @@ die Datenbank Aktualisierung ausführen.
 Lizenz:
 -------
 
-Eine Lizenz kann über http://medienworx.eu oder per E-Mail an die support@medienworx.eu erworben werden.
+Eine Lizenz kann über http://medienworx.eu oder über unser ServiceDesk unter https://project.medienworx.eu erworben werden.
 
 License: Commercial license
