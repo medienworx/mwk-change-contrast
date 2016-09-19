@@ -15,7 +15,7 @@ Die Button Formatierung übernimmt das Bootstrap 3 Framework. In der Button Konf
 Die CSS Custom Klasse wird wie folgt angesprochen:
 
 ```
-.mod_mwk_change_contrastt .btn-custom {
+.mod_mwk_change_contrast .btn-custom {
     color: #fff;
     background-color: #333;
     border-color: #010101;
